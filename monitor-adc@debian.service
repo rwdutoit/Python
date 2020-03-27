@@ -1,0 +1,11 @@
+[Unit] 
+Description=beaglebone adc
+After=network-online.target 
+
+[Service] 
+Type=simple 
+User=root
+ExecStart=/usr/bin/python /home/debian/iot-mqtt-bbb/iot-mqtt-adc.py
+
+[Install]
+WantedBy=multi-user.target
